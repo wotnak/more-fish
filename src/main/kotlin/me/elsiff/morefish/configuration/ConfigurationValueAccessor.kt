@@ -20,7 +20,7 @@ abstract class ConfigurationValueAccessor {
         val handle = findValue(
             path, currentSection::getConfigurationSection,
             currentSection::isConfigurationSection, null
-        )
+        )!!
         return ConfigurationSectionAccessor(handle)
     }
 
@@ -56,7 +56,7 @@ abstract class ConfigurationValueAccessor {
         }, default)
 
     fun string(path: String, default: String? = null): String =
-        findValue(path, currentSection::getString, currentSection::isString, default)
+        findValue(path, currentSection::getString, currentSection::isString, default)!!
 
     fun strings(path: String, default: List<String>? = null): List<String> =
         findValue(path, currentSection::getStringList, currentSection::isList, default)

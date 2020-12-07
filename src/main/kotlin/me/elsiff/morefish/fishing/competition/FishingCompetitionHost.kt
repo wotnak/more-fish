@@ -123,9 +123,9 @@ class FishingCompetitionHost(
 
     private fun topReplacementOf(number: Int, record: Record): Map<String, String> {
         return mapOf(
-            "%ordinal%" to NumberUtils.ordinalOf(number),
-            "%number%" to number.toString(),
-            "%player%" to record.fisher.name,
+            "%ordinal%" to NumberUtils.ordinalOf(number)!!,
+            "%number%" to number.toString()!!,
+            "%player%" to record.fisher.name!!,
             "%length%" to record.fish.length.toString(),
             "%fish%" to record.fish.type.name
         )

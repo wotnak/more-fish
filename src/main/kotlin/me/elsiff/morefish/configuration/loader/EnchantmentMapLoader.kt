@@ -12,7 +12,7 @@ class EnchantmentMapLoader : CustomLoader<Map<Enchantment, Int>> {
         return if (section.contains(path)) {
             section.strings(path).map {
                 val tokens = it.split(DELIMITER)
-                val enchantment = Enchantment.getByKey(NamespacedKey.minecraft(tokens[0]))
+                val enchantment = Enchantment.getByKey(NamespacedKey.minecraft(tokens[0]))!!
                 val level = tokens[1].toInt()
                 Pair<Enchantment, Int>(enchantment, level)
             }.toMap()

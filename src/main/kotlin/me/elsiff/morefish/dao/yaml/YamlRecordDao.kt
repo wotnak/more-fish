@@ -42,7 +42,7 @@ class YamlRecordDao(
         val id = record.fisher.uniqueId.toString()
         require(yaml.contains(id)) { "Record must exist in the ranking" }
 
-        setRecord(yaml.getConfigurationSection(id), record)
+        setRecord(yaml.getConfigurationSection(id)!!, record)
         yaml.save(file)
     }
 
@@ -66,15 +66,15 @@ class YamlRecordDao(
     override fun all(): List<Record> {
         val records = mutableListOf<Record>()
         for (section in yaml.getKeys(false).map(yaml::getConfigurationSection)) {
-            val id = UUID.fromString(section.name)
+            val id = UUID.fromString(section?.name)
             val player = plugin.server.getOfflinePlayer(id)
 
-            val fishTypeName = section.getString("fish-type")
+            val fishTypeName = section?.getString("fish-type")
             val fishType = fishTypeTable.types.find { it.name == fishTypeName }
                 ?: throw IllegalStateException("Fish type doesn't exist for '$fishTypeName'")
-            val fishLength = section.getDouble("fish-length")
+            val fishLength = section?.getDouble("fish-length")
 
-            val fish = Fish(fishType, fishLength)
+            val fish = Fish(fishType, fishLength!!)
             records.add(Record(player, fish))
         }
         return records.sortedDescending()

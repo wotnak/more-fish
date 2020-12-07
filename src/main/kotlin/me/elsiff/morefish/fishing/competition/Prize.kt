@@ -18,7 +18,7 @@ class Prize(
 
         val server = plugin.server
         for (command in commands) {
-            server.dispatchCommand(server.consoleSender, command.replace("@p", player.name))
+            server.dispatchCommand(server.consoleSender, command.replace("@p", player.name!!))
         }
     }
 }
