@@ -1,8 +1,7 @@
-# MoreFish
+# Rby
 
-Fork for MoreFish plugin updated to 1.16 with various bugfixes.  
-Eventually new plugin with simillar funcionality but with various improvements and new features.
+Configurable fishing competitions with custom fish types for your minecraft server.  
+[Paper](https://papermc.io) plugin.
 
-Original project repo and info: https://github.com/woodyn1002/more-fish
+Based on [MoreFish](https://github.com/woodyn1002/more-fish) by elsiff.
 
-__Updated downloads:__ https://github.com/wotnak/more-fish/releases (download link is in Assets section)
