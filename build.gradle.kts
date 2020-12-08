@@ -7,14 +7,10 @@ plugins {
     id("net.minecrell.plugin-yml.bukkit") version "0.3.0"
 }
 
-group = "me.elsiff"
-version = "3.0.3-SNAPSHOT-fixes.3"
+group = "dev.wotnak"
+version = "0.1-SNAPSHOT"
 
-val pluginName = "MoreFish"
-val author = "elsiff"
-val website = "https://elsiff.me"
-val mainPackage = "me.elsiff.morefish"
-val mainClass = "$mainPackage.MoreFish"
+val mainPackage = "dev.wotnak.rby"
 
 repositories {
     jcenter()
@@ -68,10 +64,9 @@ tasks.withType<ShadowJar> {
 tasks { build { dependsOn(shadowJar) } }
 
 bukkit {
-    name = "MoreFish"
-    website = "https://elsiff.me"
-    author = "elsiff"
-    main = mainClass
+    name = "Rby"
+    authors = listOf("elsiff", "wotnak")
+    main = "$mainPackage.Rby"
     apiVersion = "1.16"
     softDepend = listOf("Vault", "Citizens", "PlaceholderAPI", "ProtocolLib", "mcMMO", "WorldGuard")
 }
