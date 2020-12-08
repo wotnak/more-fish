@@ -4,10 +4,11 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 plugins {
     kotlin("jvm") version "1.4.21"
     id("com.github.johnrengelman.shadow") version "6.1.0"
+    id("net.minecrell.plugin-yml.bukkit") version "0.3.0"
 }
 
 group = "me.elsiff"
-version = "3.0.3-SNAPSHOT-fixes.2"
+version = "3.0.3-SNAPSHOT-fixes.3"
 
 val pluginName = "MoreFish"
 val author = "elsiff"
@@ -46,7 +47,6 @@ dependencies {
     compileOnly("com.github.MilkBowl:VaultAPI:1.7")
     compileOnly("net.citizensnpcs:citizensapi:2.0.27-SNAPSHOT")
     compileOnly("me.clip:placeholderapi:2.10.9")
-    //compileOnly("com.github.mcMMO-Dev:mcMMO:dacd846fe7")
     compileOnly(".:mcMMO:2.1.159")
 }
 
@@ -67,12 +67,11 @@ tasks.withType<ShadowJar> {
 
 tasks { build { dependsOn(shadowJar) } }
 
-tasks.processResources {
-    expand(
-        "pluginName"      to pluginName,
-        "project.version" to project.property("version"),
-        "author"          to author,
-        "website"         to website,
-        "mainClass"       to mainClass
-    )
+bukkit {
+    name = "MoreFish"
+    website = "https://elsiff.me"
+    author = "elsiff"
+    main = mainClass
+    apiVersion = "1.16"
+    softDepend = listOf("Vault", "Citizens", "PlaceholderAPI", "ProtocolLib", "mcMMO", "WorldGuard")
 }
