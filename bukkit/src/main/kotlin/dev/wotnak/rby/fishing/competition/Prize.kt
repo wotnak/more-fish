@@ -4,12 +4,10 @@ import dev.wotnak.rby.util.NumberUtils
 import org.bukkit.OfflinePlayer
 import org.bukkit.plugin.Plugin
 
-/**
- * Created by elsiff on 2019-01-20.
- */
 class Prize(
     private val commands: List<String>
 ) {
+
     fun giveTo(player: OfflinePlayer, rankNumber: Int, plugin: Plugin) {
         if (!player.isOnline) {
             val ordinal = NumberUtils.ordinalOf(rankNumber)
@@ -21,4 +19,5 @@ class Prize(
             server.dispatchCommand(server.consoleSender, command.replace("@p", player.name!!))
         }
     }
+
 }

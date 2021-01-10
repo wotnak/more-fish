@@ -5,10 +5,8 @@ import dev.wotnak.rby.configuration.loader.*
 import org.bukkit.plugin.Plugin
 import java.nio.file.Paths
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 object Config {
+
     val standard: ConfigurationAccessor = ConfigurationAccessor()
     val fish: ConfigurationAccessor = ConfigurationAccessor()
     val lang: ConfigurationAccessor = ConfigurationAccessor()
@@ -54,4 +52,5 @@ object Config {
             }
         }
     }
+
 }

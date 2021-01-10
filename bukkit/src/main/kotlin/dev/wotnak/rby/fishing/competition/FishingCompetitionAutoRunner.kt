@@ -6,13 +6,11 @@ import org.bukkit.scheduler.BukkitRunnable
 import org.bukkit.scheduler.BukkitTask
 import java.time.LocalTime
 
-/**
- * Created by elsiff on 2019-01-18.
- */
 class FishingCompetitionAutoRunner(
     private val plugin: Plugin,
     private val competitionHost: FishingCompetitionHost
 ) {
+
     private lateinit var scheduledTimes: Collection<LocalTime>
     private var timeCheckingTask: BukkitTask? = null
 
@@ -63,4 +61,5 @@ class FishingCompetitionAutoRunner(
     companion object {
         const val HALF_MINUTE: Long = 30 * 20
     }
+
 }

@@ -4,11 +4,8 @@ import com.sk89q.worldedit.bukkit.BukkitAdapter
 import com.sk89q.worldguard.WorldGuard
 import org.bukkit.Location
 
-
-/**
- * Created by elsiff on 2019-01-20.
- */
 class WorldGuardHooker : PluginHooker {
+
     override val pluginName = "WorldGuard"
     override var hasHooked: Boolean = false
 
@@ -26,4 +23,5 @@ class WorldGuardHooker : PluginHooker {
 
         return region.contains(x, y, z)
     }
+
 }

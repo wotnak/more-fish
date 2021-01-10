@@ -9,9 +9,6 @@ import kotlin.math.max
 import kotlin.math.min
 import kotlin.random.Random
 
-/**
- * Created by elsiff on 2018-12-20.
- */
 data class FishType(
     val name: String,
     val rarity: FishRarity,
@@ -27,6 +24,7 @@ data class FishType(
     val hasCatchFirework: Boolean = false,
     val additionalPrice: Double = 0.0
 ) {
+
     fun generateFish(): Fish {
         check(lengthMin <= lengthMax) { "Max-length must not be smaller than min-length" }
 
@@ -40,4 +38,5 @@ data class FishType(
 
     private fun floorToTwoDecimalPlaces(value: Double): Double =
         floor(value * 10) / 10
+
 }

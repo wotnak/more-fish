@@ -16,16 +16,13 @@ import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 import org.bukkit.plugin.PluginDescriptionFile
 
-
-/**
- * Created by elsiff on 2018-12-26.
- */
 @CommandAlias("rby")
 class MainCommand(
     private val moreFish: Rby,
     private val competitionHost: FishingCompetitionHost,
     private val fishShop: FishShop
 ) : BaseCommand() {
+
     private val pluginInfo: PluginDescriptionFile = moreFish.description
     private val competition: FishingCompetition = competitionHost.competition
 
@@ -179,4 +176,5 @@ class MainCommand(
             }
         }
     }
+
 }

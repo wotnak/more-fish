@@ -4,10 +4,8 @@ import dev.wotnak.rby.configuration.ConfigurationValueAccessor
 import org.bukkit.NamespacedKey
 import org.bukkit.enchantments.Enchantment
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 class EnchantmentMapLoader : CustomLoader<Map<Enchantment, Int>> {
+
     override fun loadFrom(section: ConfigurationValueAccessor, path: String): Map<Enchantment, Int> {
         return if (section.contains(path)) {
             section.strings(path).map {
@@ -24,4 +22,5 @@ class EnchantmentMapLoader : CustomLoader<Map<Enchantment, Int>> {
     companion object {
         private const val DELIMITER = '|'
     }
+
 }

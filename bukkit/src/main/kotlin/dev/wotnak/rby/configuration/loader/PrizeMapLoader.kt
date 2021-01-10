@@ -4,10 +4,8 @@ import dev.wotnak.rby.configuration.ConfigurationValueAccessor
 import dev.wotnak.rby.configuration.translated
 import dev.wotnak.rby.fishing.competition.Prize
 
-/**
- * Created by elsiff on 2019-01-20.
- */
 class PrizeMapLoader : CustomLoader<Map<IntRange, Prize>> {
+
     override fun loadFrom(section: ConfigurationValueAccessor, path: String): Map<IntRange, Prize> {
         return section[path].children.map {
             val range = intRangeFrom(it.name)
@@ -31,4 +29,5 @@ class PrizeMapLoader : CustomLoader<Map<IntRange, Prize>> {
         }
         return IntRange(start, end)
     }
+
 }

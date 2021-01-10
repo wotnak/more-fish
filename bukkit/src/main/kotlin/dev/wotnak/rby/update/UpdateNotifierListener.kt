@@ -5,9 +5,6 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 
-/**
- * Created by elsiff on 2019-01-03.
- */
 class UpdateNotifierListener(
     private val newVersion: String
 ) : Listener {

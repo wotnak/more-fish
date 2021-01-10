@@ -4,10 +4,8 @@ import dev.wotnak.rby.shop.FishShopKeeperTrait
 import net.citizensnpcs.api.CitizensAPI
 import net.citizensnpcs.api.trait.TraitInfo
 
-/**
- * Created by elsiff on 2019-01-24.
- */
 class CitizensHooker : PluginHooker {
+
     override val pluginName = "Citizens"
     override var hasHooked = false
     private lateinit var traitInfo: TraitInfo
@@ -22,4 +20,5 @@ class CitizensHooker : PluginHooker {
     fun dispose() {
         CitizensAPI.getTraitFactory().deregisterTrait(traitInfo)
     }
+
 }

@@ -15,12 +15,10 @@ import org.bukkit.plugin.Plugin
 import org.bukkit.scheduler.BukkitRunnable
 import org.bukkit.scheduler.BukkitTask
 
-/**
- * Created by elsiff on 2019-01-19.
- */
 class FishingCompetitionTimerBarHandler(
     private val plugin: Plugin
 ) {
+
     private var timerBarKey = NamespacedKey(plugin, "fishing-competition-timer-bar")
     private var timerBar: BossBar? = null
     private var barUpdatingTask: BukkitTask? = null
@@ -89,4 +87,5 @@ class FishingCompetitionTimerBarHandler(
         fun onPlayerQuit(event: PlayerQuitEvent) =
             timerBar!!.removePlayer(event.player)
     }
+
 }

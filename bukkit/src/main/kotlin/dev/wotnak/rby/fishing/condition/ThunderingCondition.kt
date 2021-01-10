@@ -4,12 +4,10 @@ import dev.wotnak.rby.fishing.competition.FishingCompetition
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player
 
-/**
- * Created by elsiff on 2019-01-12.
- */
 class ThunderingCondition(
     private val thundering: Boolean
 ) : FishCondition {
+
     override fun check(
         caught: Item,
         fisher: Player,
@@ -17,4 +15,5 @@ class ThunderingCondition(
     ): Boolean {
         return caught.world.isThundering == thundering
     }
+
 }

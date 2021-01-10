@@ -4,9 +4,6 @@ import org.bukkit.Material
 import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.ItemStack
 
-/**
- * Created by elsiff on 2019-01-07.
- */
 fun Inventory.isEmptyAt(slot: Int): Boolean {
     val item = getItem(slot)
     return item == null || item.type == Material.AIR

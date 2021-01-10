@@ -24,10 +24,8 @@ import dev.wotnak.rby.update.UpdateNotifierListener
 import dev.wotnak.rby.util.OneTickScheduler
 import org.bukkit.plugin.java.JavaPlugin
 
-/**
- * Created by elsiff on 2018-12-20.
- */
 class Rby : JavaPlugin() {
+
     val protocolLib = ProtocolLibHooker()
     val vault = VaultHooker()
     val mcmmoHooker = McmmoHooker()
@@ -122,8 +120,10 @@ class Rby : JavaPlugin() {
     }
 
     companion object {
+
         private lateinit var INSTANCE: Rby
         val instance: Rby
             get() = INSTANCE
     }
+
 }

@@ -2,10 +2,8 @@ package dev.wotnak.rby.hooker
 
 import org.bukkit.plugin.PluginManager
 
-/**
- * Created by elsiff on 2018-12-31.
- */
 interface PluginHooker {
+
     val pluginName: String
     var hasHooked: Boolean
 
@@ -28,4 +26,5 @@ interface PluginHooker {
             check(hooker.hasHooked) { "${hooker.pluginName} must be hooked" }
         }
     }
+
 }

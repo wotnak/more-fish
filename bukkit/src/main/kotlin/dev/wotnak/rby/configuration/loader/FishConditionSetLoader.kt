@@ -11,10 +11,8 @@ import org.bukkit.NamespacedKey
 import org.bukkit.block.Biome
 import org.bukkit.enchantments.Enchantment
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 class FishConditionSetLoader : CustomLoader<Set<FishCondition>> {
+
     private lateinit var mcmmoHooker: McmmoHooker
     private lateinit var worldGuardHooker: WorldGuardHooker
 
@@ -73,4 +71,5 @@ class FishConditionSetLoader : CustomLoader<Set<FishCondition>> {
     companion object {
         private const val DELIMITER = '|'
     }
+
 }

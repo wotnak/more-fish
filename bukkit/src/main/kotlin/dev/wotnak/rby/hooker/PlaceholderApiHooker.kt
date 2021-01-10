@@ -6,10 +6,8 @@ import dev.wotnak.rby.configuration.format.Format
 import dev.wotnak.rby.fishing.competition.FishingCompetition
 import org.bukkit.entity.Player
 
-/**
- * Created by elsiff on 2019-01-24.
- */
 class PlaceholderApiHooker : PluginHooker {
+
     override val pluginName = "PlaceholderAPI"
     override var hasHooked = false
 
@@ -85,4 +83,5 @@ class PlaceholderApiHooker : PluginHooker {
             }
         }
     }
+
 }

@@ -5,9 +5,6 @@ import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.ItemStack
 import kotlin.math.min
 
-/**
- * Created by elsiff on 2019-01-06.
- */
 object InventoryUtils {
     fun emptyStack(): ItemStack = ItemStack(Material.AIR)
 
@@ -28,4 +25,5 @@ object InventoryUtils {
             delivery.amount = delivery.amount - placingAmount
         }
     }
+
 }

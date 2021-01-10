@@ -8,12 +8,10 @@ import dev.wotnak.rby.fishing.Fish
 import dev.wotnak.rby.fishing.competition.FishingCompetition
 import org.bukkit.entity.Player
 
-/**
- * Created by elsiff on 2019-01-13.
- */
 class NewFirstBroadcaster(
     private val competition: FishingCompetition
 ) : AbstractBroadcaster() {
+
     override val catchMessageFormat: TextFormat
         get() = Lang.format("get-1st")
 
@@ -24,4 +22,5 @@ class NewFirstBroadcaster(
     override fun announcement(fish: Fish): PlayerAnnouncement {
         return Config.newFirstAnnouncement
     }
+
 }

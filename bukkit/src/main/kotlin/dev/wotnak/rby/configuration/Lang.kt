@@ -4,10 +4,8 @@ import dev.wotnak.rby.configuration.format.TextFormat
 import dev.wotnak.rby.configuration.format.TextListFormat
 import java.time.Duration
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 object Lang {
+
     const val ALTERNATE_COLOR_CODE = '&'
     private val langConfig: ConfigurationAccessor = Config.lang
 
@@ -36,4 +34,5 @@ object Lang {
             .append(text("time-format-seconds"))
         return builder.toString()
     }
+
 }

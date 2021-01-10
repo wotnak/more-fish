@@ -15,12 +15,10 @@ import org.bukkit.inventory.meta.ItemMeta
 import org.bukkit.inventory.meta.SkullMeta
 import java.util.*
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 class CustomItemStackLoader(
     private val enchantmentMapLoader: EnchantmentMapLoader
 ) : CustomLoader<ItemStack> {
+
     lateinit var protocolLib: ProtocolLibHooker
 
     override fun loadFrom(section: ConfigurationValueAccessor, path: String): ItemStack {
@@ -55,4 +53,5 @@ class CustomItemStackLoader(
             return itemStack
         }
     }
+
 }

@@ -5,10 +5,8 @@ import org.bukkit.entity.Item
 import org.bukkit.entity.Player
 import kotlin.random.Random
 
-/**
- * Created by elsiff on 2018-12-23.
- */
 class MutableFishTypeTable : HashMap<FishRarity, Set<FishType>>(), FishTypeTable {
+
     override val defaultRarity: FishRarity?
         get() {
             val defaultRarities = rarities.filter { it.default }
@@ -66,4 +64,5 @@ class MutableFishTypeTable : HashMap<FishRarity, Set<FishType>>(), FishTypeTable
         check(types.isNotEmpty()) { "No fish type matches given condition" }
         return types.random()
     }
+
 }

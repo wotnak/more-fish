@@ -4,10 +4,8 @@ import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.potion.PotionEffectType
 
-/**
- * Created by elsiff on 2018-12-31.
- */
 object NamespacedKeyUtils {
+
     fun fromMinecraft(id: String): NamespacedKey {
         if (id.contains(':'))
             return fromMinecraft(id.split(':')[1])
@@ -27,4 +25,5 @@ object NamespacedKeyUtils {
         return PotionEffectType.getByName(namespacedKey.key)
             ?: throw IllegalStateException("There's no potion effect type whose id is '$namespacedKey'")
     }
+
 }

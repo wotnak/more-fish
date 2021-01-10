@@ -8,10 +8,8 @@ import dev.wotnak.rby.fishing.FishType
 import org.bukkit.Material
 import org.bukkit.entity.Player
 
-/**
- * Created by elsiff on 2018-12-25.
- */
 abstract class AbstractBroadcaster : CatchHandler {
+
     abstract val catchMessageFormat: TextFormat
 
     abstract fun meetBroadcastCondition(catcher: Player, fish: Fish): Boolean
@@ -44,4 +42,5 @@ abstract class AbstractBroadcaster : CatchHandler {
         return (if (fishType.noDisplay) "" else fishType.rarity.displayName.toUpperCase() + " ") +
                 fishType.displayName
     }
+
 }

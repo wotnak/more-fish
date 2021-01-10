@@ -16,15 +16,13 @@ import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
 
-/**
- * Created by elsiff on 2019-01-03.
- */
 class FishShopGui(
     private val shop: FishShop,
     private val converter: FishItemStackConverter,
     private val oneTickScheduler: OneTickScheduler,
     private val user: Player
 ) : ChestInventoryGui(user.server, 4, Lang.text("shop-gui-title")) {
+
     private val bottomBarSlots: List<Int> = slotsOf(minX..maxX, maxY)
     private val priceIconSlot: Int = slotOf(centerX, maxY)
     private val fishSlots: List<Int> = slotsOf(minX..maxX, minY until maxY)
@@ -108,4 +106,5 @@ class FishShopGui(
         }
         inventory.setItem(priceIconSlot, emeraldIcon)
     }
+
 }

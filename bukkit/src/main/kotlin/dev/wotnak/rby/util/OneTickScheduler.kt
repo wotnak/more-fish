@@ -3,12 +3,10 @@ package dev.wotnak.rby.util
 import org.bukkit.plugin.Plugin
 import org.bukkit.scheduler.BukkitRunnable
 
-/**
- * Created by elsiff on 2019-01-06.
- */
 class OneTickScheduler(
     private val plugin: Plugin
 ) {
+
     private val runnableMap: MutableMap<Any, MutableSet<OneTickRunnable>> = mutableMapOf()
 
     fun scheduleLater(client: Any, action: () -> Unit) {
@@ -36,4 +34,5 @@ class OneTickScheduler(
             runnableMap[client]?.remove(this)
         }
     }
+
 }

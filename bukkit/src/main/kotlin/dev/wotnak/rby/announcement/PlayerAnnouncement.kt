@@ -2,10 +2,8 @@ package dev.wotnak.rby.announcement
 
 import org.bukkit.entity.Player
 
-/**
- * Created by elsiff on 2019-01-15.
- */
 interface PlayerAnnouncement {
+
     fun receiversOf(catcher: Player): Collection<Player>
 
     companion object {
@@ -23,4 +21,5 @@ interface PlayerAnnouncement {
         fun ofServerBroadcast(): PlayerAnnouncement =
             ServerAnnouncement()
     }
+
 }

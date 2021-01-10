@@ -7,13 +7,11 @@ import dev.wotnak.rby.fishing.FishRarity
 import dev.wotnak.rby.fishing.catchhandler.CatchCommandExecutor
 import dev.wotnak.rby.fishing.catchhandler.CatchHandler
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 class FishRaritySetLoader(
     private val chatColorLoader: ChatColorLoader,
     private val playerAnnouncementLoader: PlayerAnnouncementLoader
 ) : CustomLoader<Set<FishRarity>> {
+
     override fun loadFrom(section: ConfigurationValueAccessor, path: String): Set<FishRarity> {
         return section[path].children.map {
             val catchHandlers = mutableListOf<CatchHandler>()
@@ -38,4 +36,5 @@ class FishRaritySetLoader(
             )
         }.toSet()
     }
+
 }

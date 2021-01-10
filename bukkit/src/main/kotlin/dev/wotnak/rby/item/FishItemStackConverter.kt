@@ -10,13 +10,11 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
 import org.bukkit.plugin.Plugin
 
-/**
- * Created by elsiff on 2018-12-28.
- */
 class FishItemStackConverter(
     plugin: Plugin,
     fishTypeTable: FishTypeTable
 ) {
+
     private val fishReader: FishItemTagReader
     private val fishWriter: FishItemTagWriter
 
@@ -60,4 +58,5 @@ class FishItemStackConverter(
             "%fish%" to fish.type.displayName
         )
     }
+
 }

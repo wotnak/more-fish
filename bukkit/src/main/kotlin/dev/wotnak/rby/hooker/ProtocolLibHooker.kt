@@ -1,9 +1,7 @@
 package dev.wotnak.rby.hooker
 
-/**
- * Created by elsiff on 2018-12-31.
- */
 class ProtocolLibHooker : PluginHooker {
+
     override val pluginName = "ProtocolLib"
     override var hasHooked = false
     lateinit var skullNbtHandler: SkullNbtHandler
@@ -14,4 +12,5 @@ class ProtocolLibHooker : PluginHooker {
         skullNbtHandler = SkullNbtHandler()
         hasHooked = true
     }
+
 }

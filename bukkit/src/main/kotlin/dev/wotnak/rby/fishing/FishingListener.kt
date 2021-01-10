@@ -14,15 +14,13 @@ import org.bukkit.event.EventPriority
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerFishEvent
 
-/**
- * Created by elsiff on 2018-12-24.
- */
 class FishingListener(
     private val fishTypeTable: FishTypeTable,
     private val converter: FishItemStackConverter,
     private val competition: FishingCompetition,
     private val globalCatchHandlers: List<CatchHandler>
 ) : Listener {
+
     private val fishMaterials: List<Material> = listOf(
         Material.COD, Material.SALMON, Material.PUFFERFISH, Material.TROPICAL_FISH
     )
@@ -76,4 +74,5 @@ class FishingListener(
             catchHandlers
         }
     }
+
 }

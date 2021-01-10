@@ -7,6 +7,7 @@ import org.bukkit.entity.Player
 class TimeCondition(
     private val state: TimeState
 ) : FishCondition {
+
     override fun check(
         caught: Item,
         fisher: Player,
@@ -29,4 +30,5 @@ class TimeCondition(
             }
         }
     }
+
 }

@@ -7,15 +7,13 @@ import dev.wotnak.rby.fishing.FishType
 import dev.wotnak.rby.fishing.catchhandler.CatchCommandExecutor
 import dev.wotnak.rby.fishing.catchhandler.CatchHandler
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 class FishTypeMapLoader(
     private val fishRaritySetLoader: FishRaritySetLoader,
     private val customItemStackLoader: CustomItemStackLoader,
     private val fishConditionSetLoader: FishConditionSetLoader,
     private val playerAnnouncementLoader: PlayerAnnouncementLoader
 ) : CustomLoader<Map<FishRarity, Set<FishType>>> {
+
     override fun loadFrom(section: ConfigurationValueAccessor, path: String): Map<FishRarity, Set<FishType>> {
         section[path].let { root ->
             val rarities = fishRaritySetLoader.loadFrom(root, "rarity-list")
@@ -54,4 +52,5 @@ class FishTypeMapLoader(
     private fun findRarity(rarities: Set<FishRarity>, name: String): FishRarity {
         return rarities.find { it.name == name } ?: throw IllegalStateException("Rarity '$name' doesn't exist")
     }
+
 }

@@ -4,10 +4,8 @@ import dev.wotnak.rby.fishing.competition.FishingCompetition
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 interface FishTypeTable : Map<FishRarity, Set<FishType>> {
+
     val defaultRarity: FishRarity?
     val rarities: Set<FishRarity>
     val types: Set<FishType>
@@ -22,4 +20,5 @@ interface FishTypeTable : Map<FishRarity, Set<FishType>> {
         competition: FishingCompetition,
         rarity: FishRarity = pickRandomRarity()
     ): FishType
+
 }

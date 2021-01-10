@@ -11,15 +11,13 @@ import net.milkbowl.vault.economy.Economy
 import org.bukkit.entity.Player
 import kotlin.math.floor
 
-/**
- * Created by elsiff on 2019-01-03.
- */
 class FishShop(
     private val guiOpener: GuiOpener,
     private val oneTickScheduler: OneTickScheduler,
     private val converter: FishItemStackConverter,
     private val vault: VaultHooker
 ) {
+
     private val economy: Economy
         get() {
             check(vault.hasHooked) { "Vault must be hooked for fish shop feature" }
@@ -64,4 +62,5 @@ class FishShop(
         val gui = FishShopGui(this, converter, oneTickScheduler, player)
         guiOpener.open(player, gui)
     }
+
 }

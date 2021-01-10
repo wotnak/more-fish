@@ -9,6 +9,7 @@ class EnchantmentCondition(
     private val enchantment: Enchantment,
     private val minLevel: Int
 ) : FishCondition {
+
     override fun check(
         caught: Item,
         fisher: Player,
@@ -17,4 +18,5 @@ class EnchantmentCondition(
         val fishingRod = fisher.inventory.itemInMainHand ?: return false
         return fishingRod.containsEnchantment(enchantment) && fishingRod.getEnchantmentLevel(enchantment) >= minLevel
     }
+
 }

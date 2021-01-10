@@ -6,14 +6,12 @@ import org.bukkit.NamespacedKey
 import org.bukkit.inventory.meta.ItemMeta
 import org.bukkit.persistence.PersistentDataType
 
-/**
- * Created by elsiff on 2019-01-03.
- */
 class FishItemTagReader(
     private val fishTypeTable: FishTypeTable,
     private val fishTypeKey: NamespacedKey,
     private val fishLengthKey: NamespacedKey
 ) {
+
     fun canRead(itemMeta: ItemMeta): Boolean {
         return itemMeta.persistentDataContainer.let { tags ->
             tags.has(fishTypeKey, PersistentDataType.STRING) && tags.has(fishLengthKey, PersistentDataType.DOUBLE)
@@ -32,4 +30,5 @@ class FishItemTagReader(
             Fish(type, length!!)
         }
     }
+
 }

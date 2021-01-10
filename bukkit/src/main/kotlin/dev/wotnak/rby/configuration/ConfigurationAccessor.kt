@@ -6,10 +6,8 @@ import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.plugin.Plugin
 import java.nio.file.Path
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 class ConfigurationAccessor : ConfigurationValueAccessor() {
+
     private lateinit var configuration: Configuration
     private lateinit var _filePath: Path
 
@@ -33,4 +31,5 @@ class ConfigurationAccessor : ConfigurationValueAccessor() {
 
         configuration = YamlConfiguration().apply { load(configurationFile) }
     }
+
 }

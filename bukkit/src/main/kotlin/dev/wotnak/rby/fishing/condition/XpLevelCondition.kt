@@ -7,6 +7,7 @@ import org.bukkit.entity.Player
 class XpLevelCondition(
     private val minLevel: Int
 ) : FishCondition {
+
     override fun check(
         caught: Item,
         fisher: Player,
@@ -14,4 +15,5 @@ class XpLevelCondition(
     ): Boolean {
         return fisher.level >= minLevel
     }
+
 }

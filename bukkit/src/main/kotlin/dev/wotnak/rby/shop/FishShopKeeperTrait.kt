@@ -7,11 +7,9 @@ import net.citizensnpcs.api.trait.Trait
 import net.citizensnpcs.api.trait.TraitName
 import org.bukkit.event.EventHandler
 
-/**
- * Created by elsiff on 2019-01-24.
- */
 @TraitName("fishshop")
 class FishShopKeeperTrait : Trait("fishshop") {
+
     @EventHandler
     fun onClickNpc(event: NPCRightClickEvent) {
         if (event.npc == this.npc && dev.wotnak.rby.Rby.instance.isEnabled) {
@@ -30,4 +28,5 @@ class FishShopKeeperTrait : Trait("fishshop") {
             this.fishShop = fishShop
         }
     }
+
 }

@@ -7,10 +7,8 @@ import dev.wotnak.rby.configuration.format.TextFormat
 import dev.wotnak.rby.fishing.Fish
 import org.bukkit.entity.Player
 
-/**
- * Created by elsiff on 2019-01-13.
- */
 class CatchBroadcaster : AbstractBroadcaster() {
+
     override val catchMessageFormat: TextFormat
         get() = Lang.format("catch-fish")
 
@@ -21,4 +19,5 @@ class CatchBroadcaster : AbstractBroadcaster() {
     override fun announcement(fish: Fish): PlayerAnnouncement {
         return fish.type.catchAnnouncement
     }
+
 }

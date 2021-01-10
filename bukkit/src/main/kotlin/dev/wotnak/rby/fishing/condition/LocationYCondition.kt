@@ -8,7 +8,9 @@ import org.bukkit.entity.Player
 class LocationYCondition(
     private val range: DoubleRange
 ) : FishCondition {
+
     override fun check(caught: Item, fisher: Player, competition: FishingCompetition): Boolean {
         return range.containsDouble(fisher.location.y)
     }
+
 }

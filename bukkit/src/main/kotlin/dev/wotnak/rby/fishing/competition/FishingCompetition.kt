@@ -5,10 +5,8 @@ import dev.wotnak.rby.dao.RecordDao
 import dev.wotnak.rby.fishing.Fish
 import org.bukkit.OfflinePlayer
 
-/**
- * Created by elsiff on 2018-12-25.
- */
 class FishingCompetition {
+
     var state: State = State.DISABLED
 
     val ranking: List<Record>
@@ -94,4 +92,5 @@ class FishingCompetition {
         check(state == State.DISABLED) { "Fishing competition hasn't disabled" }
 
     enum class State { ENABLED, DISABLED }
+
 }

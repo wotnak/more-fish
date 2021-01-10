@@ -8,6 +8,7 @@ import org.bukkit.entity.Player
 class BiomeCondition(
     private val biomes: Collection<Biome>
 ) : FishCondition {
+
     override fun check(
         caught: Item,
         fisher: Player,
@@ -18,4 +19,5 @@ class BiomeCondition(
         val z = caught.location.blockZ
         return caught.world.getBiome(x, y, z) in biomes
     }
+
 }

@@ -9,12 +9,10 @@ import org.bukkit.event.block.Action
 import org.bukkit.event.block.SignChangeEvent
 import org.bukkit.event.player.PlayerInteractEvent
 
-/**
- * Created by elsiff on 2019-01-19.
- */
 class FishShopSignListener(
     private val fishShop: FishShop
 ) : Listener {
+
     private val shopSignTitle: String
         get() = Config.standard.text("fish-shop.sign.title")
 
@@ -48,4 +46,5 @@ class FishShopSignListener(
             }
         }
     }
+
 }

@@ -6,11 +6,8 @@ import com.comphenix.protocol.wrappers.nbt.NbtFactory
 import org.bukkit.inventory.ItemStack
 import java.util.*
 
-
-/**
- * Created by elsiff on 2018-12-31.
- */
 class SkullNbtHandler {
+
     fun writeTexture(itemStack: ItemStack, textureValue: String): ItemStack {
         val editingStack = if (MinecraftReflection.isCraftItemStack(itemStack))
             itemStack
@@ -33,4 +30,5 @@ class SkullNbtHandler {
         NbtFactory.setItemTag(editingStack, tag)
         return editingStack
     }
+
 }

@@ -10,13 +10,11 @@ import org.bukkit.plugin.Plugin
 import org.bukkit.scheduler.BukkitTask
 import kotlin.math.min
 
-/**
- * Created by elsiff on 2019-01-18.
- */
 class FishingCompetitionHost(
     private val plugin: Plugin,
     val competition: FishingCompetition
 ) {
+
     private val timerBarHandler: FishingCompetitionTimerBarHandler = FishingCompetitionTimerBarHandler(plugin)
     private var timerTask: BukkitTask? = null
 
@@ -130,4 +128,5 @@ class FishingCompetitionHost(
             "%fish%" to record.fish.type.name
         )
     }
+
 }

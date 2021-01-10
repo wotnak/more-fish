@@ -4,10 +4,8 @@ import dev.wotnak.rby.configuration.format.TextFormat
 import dev.wotnak.rby.configuration.format.TextListFormat
 import org.bukkit.configuration.ConfigurationSection
 
-/**
- * Created by elsiff on 2019-01-09.
- */
 abstract class ConfigurationValueAccessor {
+
     protected abstract val currentSection: ConfigurationSection
 
     val children: Set<ConfigurationSectionAccessor>
@@ -75,4 +73,5 @@ abstract class ConfigurationValueAccessor {
             default
         }
     }
+
 }

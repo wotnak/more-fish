@@ -6,10 +6,8 @@ import org.bukkit.FireworkEffect
 import org.bukkit.entity.Firework
 import org.bukkit.entity.Player
 
-/**
- * Created by elsiff on 2019-01-15.
- */
 class CatchFireworkSpawner : CatchHandler {
+
     private val effect = FireworkEffect.builder()
         .with(FireworkEffect.Type.BALL_LARGE)
         .withColor(Color.AQUA)
@@ -27,4 +25,5 @@ class CatchFireworkSpawner : CatchHandler {
             firework.fireworkMeta = meta
         }
     }
+
 }

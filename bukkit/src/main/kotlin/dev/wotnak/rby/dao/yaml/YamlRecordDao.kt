@@ -11,13 +11,11 @@ import java.io.File
 import java.util.*
 import kotlin.math.min
 
-/**
- * Created by elsiff on 2019-01-18.
- */
 class YamlRecordDao(
     private val plugin: Plugin,
     private val fishTypeTable: FishTypeTable
 ) : RecordDao {
+
     private val yaml: YamlConfiguration
     private val file: File
 
@@ -79,4 +77,5 @@ class YamlRecordDao(
         }
         return records.sortedDescending()
     }
+
 }
