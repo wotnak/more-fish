@@ -55,7 +55,6 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<ShadowJar> {
     relocate("co.aikar.commands", "${group}.acf")
-    archiveBaseName.set("${rootProject.name}-${project.name}")
 }
 
 tasks { build { dependsOn(shadowJar) } }
