@@ -11,7 +11,7 @@ class VaultHook : PluginHook {
     override fun hook(plugin: dev.wotnak.rby.Rby) {
         PluginHook.checkEnabled(this, plugin.server.pluginManager)
 
-        val registration = plugin.server.servicesManager.getRegistration(Economy::class.java) ?: null
+        val registration = plugin.server.servicesManager.getRegistration(Economy::class.java)
         if (registration != null) {
             economy = registration.provider
         }

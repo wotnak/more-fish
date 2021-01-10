@@ -92,7 +92,7 @@ class FishShopGui(
 
     private fun allFishItemStacks(): List<ItemStack> {
         return fishSlots
-            .mapNotNull { slot -> inventory.getItem(slot) ?: null }
+            .mapNotNull { slot -> inventory.getItem(slot) }
             .filter { itemStack -> converter.isFish(itemStack) }
     }
 

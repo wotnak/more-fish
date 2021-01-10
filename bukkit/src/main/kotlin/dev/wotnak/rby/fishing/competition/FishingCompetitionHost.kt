@@ -72,8 +72,8 @@ class FishingCompetitionHost(
                 val ranking = competition.ranking
                 for ((range, prize) in prizes) {
                     val rangeInIndex = IntRange(
-                        start = range.start - 1,
-                        endInclusive = min(range.endInclusive - 1, ranking.lastIndex)
+                        start = range.first - 1,
+                        endInclusive = min(range.last - 1, ranking.lastIndex)
                     )
                     for (record in ranking.slice(rangeInIndex)) {
                         val rankNumber = competition.rankNumberOf(record)
@@ -121,8 +121,8 @@ class FishingCompetitionHost(
 
     private fun topReplacementOf(number: Int, record: Record): Map<String, String> {
         return mapOf(
-            "%ordinal%" to NumberUtils.ordinalOf(number)!!,
-            "%number%" to number.toString()!!,
+            "%ordinal%" to NumberUtils.ordinalOf(number),
+            "%number%" to number.toString(),
             "%player%" to record.fisher.name!!,
             "%length%" to record.fish.length.toString(),
             "%fish%" to record.fish.type.name
