@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2016 elsiff  
+Copyright (c) 2016-2019 elsiff  
 Copyright (c) 2020 wotnak
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
