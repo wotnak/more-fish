@@ -1,6 +1,6 @@
 package dev.wotnak.rby.configuration.format
 
-import dev.wotnak.rby.hooker.PlaceholderApiHooker
+import dev.wotnak.rby.hooks.PlaceholderApiHook
 import org.bukkit.entity.Player
 
 interface Format<T, R> {
@@ -13,15 +13,15 @@ interface Format<T, R> {
     fun output(player: Player? = null): R
 
     companion object {
-        private lateinit var placeholderApiHooker: PlaceholderApiHooker
+        private lateinit var placeholderApiHook: PlaceholderApiHook
 
-        fun init(placeholderApiHooker: PlaceholderApiHooker) {
-            this.placeholderApiHooker = placeholderApiHooker
+        fun init(placeholderApiHook: PlaceholderApiHook) {
+            this.placeholderApiHook = placeholderApiHook
         }
 
         fun tryReplacing(string: String, player: Player?): String {
-            return if (::placeholderApiHooker.isInitialized && placeholderApiHooker.hasHooked)
-                placeholderApiHooker.tryReplacing(string, player)
+            return if (::placeholderApiHook.isInitialized && placeholderApiHook.hasHooked)
+                placeholderApiHook.tryReplacing(string, player)
             else
                 string
         }

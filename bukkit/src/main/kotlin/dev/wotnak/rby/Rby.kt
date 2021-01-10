@@ -15,7 +15,7 @@ import dev.wotnak.rby.fishing.catchhandler.NewFirstBroadcaster
 import dev.wotnak.rby.fishing.competition.FishingCompetition
 import dev.wotnak.rby.fishing.competition.FishingCompetitionAutoRunner
 import dev.wotnak.rby.fishing.competition.FishingCompetitionHost
-import dev.wotnak.rby.hooker.*
+import dev.wotnak.rby.hooks.*
 import dev.wotnak.rby.item.FishItemStackConverter
 import dev.wotnak.rby.shop.FishShop
 import dev.wotnak.rby.shop.FishShopSignListener
@@ -24,12 +24,12 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class Rby : JavaPlugin() {
 
-    val protocolLib = ProtocolLibHooker()
-    val vault = VaultHooker()
-    val mcmmoHooker = McmmoHooker()
-    val worldGuardHooker = WorldGuardHooker()
-    val citizensHooker = CitizensHooker()
-    val placeholderApiHooker = PlaceholderApiHooker()
+    val protocolLib = ProtocolLibHook()
+    val vault = VaultHook()
+    val mcmmoHook = McmmoHook()
+    val worldGuardHook = WorldGuardHook()
+    val citizensHook = CitizensHook()
+    val placeholderApiHook = PlaceholderApiHook()
 
     val guiRegistry = GuiRegistry(this)
     val guiOpener = GuiOpener(guiRegistry)
@@ -52,10 +52,10 @@ class Rby : JavaPlugin() {
 
         protocolLib.hookIfEnabled(this)
         vault.hookIfEnabled(this)
-        mcmmoHooker.hookIfEnabled(this)
-        worldGuardHooker.hookIfEnabled(this)
-        citizensHooker.hookIfEnabled(this)
-        placeholderApiHooker.hookIfEnabled(this)
+        mcmmoHook.hookIfEnabled(this)
+        worldGuardHook.hookIfEnabled(this)
+        citizensHook.hookIfEnabled(this)
+        placeholderApiHook.hookIfEnabled(this)
 
         applyConfig()
 
@@ -82,8 +82,8 @@ class Rby : JavaPlugin() {
         if (autoRunner.isEnabled) {
             autoRunner.disable()
         }
-        if (citizensHooker.hasHooked) {
-            citizensHooker.dispose()
+        if (citizensHook.hasHooked) {
+            citizensHook.dispose()
         }
         logger.info("Plugin has been disabled.")
     }
@@ -91,7 +91,7 @@ class Rby : JavaPlugin() {
     fun applyConfig() {
         Config.load(this)
         Config.customItemStackLoader.protocolLib = protocolLib
-        Config.fishConditionSetLoader.init(mcmmoHooker, worldGuardHooker)
+        Config.fishConditionSetLoader.init(mcmmoHook, worldGuardHook)
 
         fishTypeTable.clear()
         fishTypeTable.putAll(Config.fishTypeMapLoader.loadFrom(Config.fish))

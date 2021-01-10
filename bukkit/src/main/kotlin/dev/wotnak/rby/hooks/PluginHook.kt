@@ -1,8 +1,8 @@
-package dev.wotnak.rby.hooker
+package dev.wotnak.rby.hooks
 
 import org.bukkit.plugin.PluginManager
 
-interface PluginHooker {
+interface PluginHook {
 
     val pluginName: String
     var hasHooked: Boolean
@@ -18,12 +18,12 @@ interface PluginHooker {
     }
 
     companion object {
-        fun checkEnabled(hooker: PluginHooker, pluginManager: PluginManager) {
-            check(hooker.canHook(pluginManager)) { "${hooker.pluginName} must be enabled" }
+        fun checkEnabled(hook: PluginHook, pluginManager: PluginManager) {
+            check(hook.canHook(pluginManager)) { "${hook.pluginName} must be enabled" }
         }
 
-        fun checkHooked(hooker: PluginHooker) {
-            check(hooker.hasHooked) { "${hooker.pluginName} must be hooked" }
+        fun checkHooked(hook: PluginHook) {
+            check(hook.hasHooked) { "${hook.pluginName} must be hooked" }
         }
     }
 

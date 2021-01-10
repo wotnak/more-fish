@@ -1,10 +1,10 @@
-package dev.wotnak.rby.hooker
+package dev.wotnak.rby.hooks
 
 import com.sk89q.worldedit.bukkit.BukkitAdapter
 import com.sk89q.worldguard.WorldGuard
 import org.bukkit.Location
 
-class WorldGuardHooker : PluginHooker {
+class WorldGuardHook : PluginHook {
 
     override val pluginName = "WorldGuard"
     override var hasHooked: Boolean = false

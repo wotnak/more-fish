@@ -4,7 +4,7 @@ import me.elsiff.egui.GuiOpener
 import dev.wotnak.rby.configuration.Config
 import dev.wotnak.rby.configuration.ConfigurationSectionAccessor
 import dev.wotnak.rby.fishing.Fish
-import dev.wotnak.rby.hooker.VaultHooker
+import dev.wotnak.rby.hooks.VaultHook
 import dev.wotnak.rby.item.FishItemStackConverter
 import dev.wotnak.rby.util.OneTickScheduler
 import net.milkbowl.vault.economy.Economy
@@ -15,7 +15,7 @@ class FishShop(
     private val guiOpener: GuiOpener,
     private val oneTickScheduler: OneTickScheduler,
     private val converter: FishItemStackConverter,
-    private val vault: VaultHooker
+    private val vault: VaultHook
 ) {
 
     private val economy: Economy

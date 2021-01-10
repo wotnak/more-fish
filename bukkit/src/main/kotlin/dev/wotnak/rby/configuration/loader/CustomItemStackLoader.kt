@@ -2,8 +2,8 @@ package dev.wotnak.rby.configuration.loader
 
 import dev.wotnak.rby.configuration.ConfigurationValueAccessor
 import dev.wotnak.rby.configuration.translated
-import dev.wotnak.rby.hooker.PluginHooker
-import dev.wotnak.rby.hooker.ProtocolLibHooker
+import dev.wotnak.rby.hooks.PluginHook
+import dev.wotnak.rby.hooks.ProtocolLibHook
 import dev.wotnak.rby.item.edit
 import dev.wotnak.rby.item.editIfHas
 import dev.wotnak.rby.item.editIfIs
@@ -19,7 +19,7 @@ class CustomItemStackLoader(
     private val enchantmentMapLoader: EnchantmentMapLoader
 ) : CustomLoader<ItemStack> {
 
-    lateinit var protocolLib: ProtocolLibHooker
+    lateinit var protocolLib: ProtocolLibHook
 
     override fun loadFrom(section: ConfigurationValueAccessor, path: String): ItemStack {
         section[path].let {
@@ -47,7 +47,7 @@ class CustomItemStackLoader(
             }
 
             if (it.contains("skull-texture")) {
-                PluginHooker.checkHooked(protocolLib)
+                PluginHook.checkHooked(protocolLib)
                 itemStack = protocolLib.skullNbtHandler.writeTexture(itemStack, it.string("skull-texture"))
             }
             return itemStack

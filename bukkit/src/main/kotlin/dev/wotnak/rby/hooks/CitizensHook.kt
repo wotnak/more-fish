@@ -1,10 +1,10 @@
-package dev.wotnak.rby.hooker
+package dev.wotnak.rby.hooks
 
 import dev.wotnak.rby.shop.FishShopKeeperTrait
 import net.citizensnpcs.api.CitizensAPI
 import net.citizensnpcs.api.trait.TraitInfo
 
-class CitizensHooker : PluginHooker {
+class CitizensHook : PluginHook {
 
     override val pluginName = "Citizens"
     override var hasHooked = false

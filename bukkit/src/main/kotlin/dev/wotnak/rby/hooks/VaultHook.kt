@@ -1,15 +1,15 @@
-package dev.wotnak.rby.hooker
+package dev.wotnak.rby.hooks
 
 import net.milkbowl.vault.economy.Economy
 
-class VaultHooker : PluginHooker {
+class VaultHook : PluginHook {
 
     override val pluginName = "Vault"
     override var hasHooked = false
     lateinit var economy: Economy
 
     override fun hook(plugin: dev.wotnak.rby.Rby) {
-        PluginHooker.checkEnabled(this, plugin.server.pluginManager)
+        PluginHook.checkEnabled(this, plugin.server.pluginManager)
 
         val registration = plugin.server.servicesManager.getRegistration(Economy::class.java) ?: null
         if (registration != null) {

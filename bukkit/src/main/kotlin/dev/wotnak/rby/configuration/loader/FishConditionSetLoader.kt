@@ -3,8 +3,8 @@ package dev.wotnak.rby.configuration.loader
 import dev.wotnak.rby.configuration.ConfigurationValueAccessor
 import dev.wotnak.rby.fishing.competition.FishingCompetition
 import dev.wotnak.rby.fishing.condition.*
-import dev.wotnak.rby.hooker.McmmoHooker
-import dev.wotnak.rby.hooker.WorldGuardHooker
+import dev.wotnak.rby.hooks.McmmoHook
+import dev.wotnak.rby.hooks.WorldGuardHook
 import dev.wotnak.rby.util.NamespacedKeyUtils
 import org.apache.commons.lang.math.DoubleRange
 import org.bukkit.NamespacedKey
@@ -13,11 +13,11 @@ import org.bukkit.enchantments.Enchantment
 
 class FishConditionSetLoader : CustomLoader<Set<FishCondition>> {
 
-    private lateinit var mcmmoHooker: McmmoHooker
-    private lateinit var worldGuardHooker: WorldGuardHooker
+    private lateinit var mcmmoHook: McmmoHook
+    private lateinit var worldGuardHooker: WorldGuardHook
 
-    fun init(mcmmoHooker: McmmoHooker, worldGuardHooker: WorldGuardHooker) {
-        this.mcmmoHooker = mcmmoHooker
+    fun init(mcmmoHook: McmmoHook, worldGuardHooker: WorldGuardHook) {
+        this.mcmmoHook = mcmmoHook
         this.worldGuardHooker = worldGuardHooker
     }
 
@@ -60,7 +60,7 @@ class FishConditionSetLoader : CustomLoader<Set<FishCondition>> {
             "location-y" ->
                 LocationYCondition(DoubleRange(args[0].toDouble(), args[1].toDouble()))
             "mcmmo-skill" ->
-                McmmoSkillCondition(mcmmoHooker, args[0], args[1].toInt())
+                McmmoSkillCondition(mcmmoHook, args[0], args[1].toInt())
             "worldguard-region" ->
                 WorldGuardRegionCondition(worldGuardHooker, args[0])
             else ->

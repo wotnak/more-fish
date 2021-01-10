@@ -1,4 +1,4 @@
-package dev.wotnak.rby.hooker
+package dev.wotnak.rby.hooks
 
 import com.comphenix.protocol.utility.MinecraftReflection
 import com.comphenix.protocol.wrappers.nbt.NbtCompound

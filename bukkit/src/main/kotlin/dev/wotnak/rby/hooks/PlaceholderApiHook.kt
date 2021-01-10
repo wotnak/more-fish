@@ -1,4 +1,4 @@
-package dev.wotnak.rby.hooker
+package dev.wotnak.rby.hooks
 
 import me.clip.placeholderapi.PlaceholderAPI
 import me.clip.placeholderapi.expansion.PlaceholderExpansion
@@ -6,7 +6,7 @@ import dev.wotnak.rby.configuration.format.Format
 import dev.wotnak.rby.fishing.competition.FishingCompetition
 import org.bukkit.entity.Player
 
-class PlaceholderApiHooker : PluginHooker {
+class PlaceholderApiHook : PluginHook {
 
     override val pluginName = "PlaceholderAPI"
     override var hasHooked = false
