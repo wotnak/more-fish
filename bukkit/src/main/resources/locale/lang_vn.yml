@@ -91,6 +91,3 @@ shop-no-fish: "&b[MoreFish]&r Không có cá để bán. Vui lòng bỏ cá vào
 created-sign-shop: "&b[MoreFish]&r Bạn đã tạo Cửa hàng Cá!"
 
 old-file: "&c[MoreFish] Your %s is too old! Please make it up-to-date."
-new-version:
-  - "&b[MoreFish]&r New version found: %s"
-  - "&b[MoreFish]&r https://www.spigotmc.org/resources/morefish.22926/"

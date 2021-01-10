@@ -89,6 +89,3 @@ shop-no-fish: "&b[MoreFish]&r 판매할 물고기를 올려주세요."
 created-sign-shop: "&b[MoreFish]&r 물고기 상점을 개설했습니다!"
 
 old-file: "&c[MoreFish] %s 파일이 오래된 버전입니다. 삭제 후 플러그인을 재실행 해주세요!"
-new-version:
-  - "&b[MoreFish]&r 새로운 버전이 발견되었습니다: %s"
-  - "&b[MoreFish]&r https://www.spigotmc.org/resources/morefish.22926/"

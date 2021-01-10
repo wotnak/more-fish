@@ -91,6 +91,3 @@ shop-no-fish: "&b[MoreFish]&r Brak ryb na sprzedaż. Wlóż je, proszę, do slot
 created-sign-shop: "&b[MoreFish]&r Stworzyłeś Sklep Rybny!"
 
 old-file: "&c[MoreFish] Twój %s jest przestarzały! Zaktualizuj go, proszę."
-new-version:
-  - "&b[MoreFish]&r Nowa wersja znaleziona: %s"
-  - "&b[MoreFish]&r https://www.spigotmc.org/resources/morefish.22926/"

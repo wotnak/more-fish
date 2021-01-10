@@ -82,6 +82,3 @@ entered-successfully: "&b[MoreFish]&r 値を編集しました"
 saved-changes: "&b[MoreFish]&r 変更を保存しました"
 
 old-file: "§c[MoreFish] あなたの%s は古すぎます! アップデートしてください"
-new-version:
-  - "&b[MoreFish]&r 新しいバージョンが見つかりました: %s"
-  - "&b[MoreFish]&r https://www.spigotmc.org/resources/morefish.22926/"

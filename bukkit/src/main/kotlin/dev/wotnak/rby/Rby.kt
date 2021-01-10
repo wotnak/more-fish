@@ -19,8 +19,6 @@ import dev.wotnak.rby.hooker.*
 import dev.wotnak.rby.item.FishItemStackConverter
 import dev.wotnak.rby.shop.FishShop
 import dev.wotnak.rby.shop.FishShopSignListener
-import dev.wotnak.rby.update.UpdateChecker
-import dev.wotnak.rby.update.UpdateNotifierListener
 import dev.wotnak.rby.util.OneTickScheduler
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -47,7 +45,6 @@ class Rby : JavaPlugin() {
         NewFirstBroadcaster(competition),
         CompetitionRecordAdder(competition)
     )
-    val updateChecker = UpdateChecker(22926, this.description.version)
 
     override fun onEnable() {
         INSTANCE = this
@@ -73,14 +70,6 @@ class Rby : JavaPlugin() {
         val mainCommand = MainCommand(this, competitionHost, fishShop)
         commands.registerCommand(mainCommand)
 
-        if (!isSnapshotVersion()) {
-            updateChecker.check()
-            if (updateChecker.hasNewVersion()) {
-                val notifier = UpdateNotifierListener(updateChecker.newVersion)
-                server.pluginManager.registerEvents(notifier, this)
-            }
-        }
-
         logger.info("Plugin has been enabled.")
 
         if (Config.standard.boolean("general.auto-start")) {
@@ -97,10 +86,6 @@ class Rby : JavaPlugin() {
             citizensHooker.dispose()
         }
         logger.info("Plugin has been disabled.")
-    }
-
-    private fun isSnapshotVersion(): Boolean {
-        return this.description.version.contains("SNAPSHOT", true)
     }
 
     fun applyConfig() {

@@ -91,6 +91,3 @@ shop-no-fish: "&b[MoreFish]&r 没有任何鱼可以贩卖，请放置他们."
 created-sign-shop: "&b[MoreFish]&r 你已经建立了一个卖鱼的店!"
 
 old-file: "&c[MoreFish] 你的 %s 太旧了! 请更新."
-new-version:
-  - "&b[MoreFish]&r 我们找到了一个新的版本: %s ，点击下面的链接下载最新的版本！"
-  - "&b[MoreFish]&r https://www.spigotmc.org/resources/morefish.22926/"

@@ -91,6 +91,3 @@ shop-no-fish: "&b[MoreFish]&r There's no fish to sell. Please put them on the sl
 created-sign-shop: "&b[MoreFish]&r You've created the Fish Shop!"
 
 old-file: "&c[MoreFish] Your %s is too old! Please make it up-to-date."
-new-version:
-  - "&b[MoreFish]&r New version found: %s"
-  - "&b[MoreFish]&r https://www.spigotmc.org/resources/morefish.22926/"
