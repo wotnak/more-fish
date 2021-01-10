@@ -3,7 +3,7 @@
 # translated by tanisou (2.1.0)
 #
 
-version: 211
+version: 212
 
 # %player% - 釣り人の名前
 # %length% - 魚のサイズ
@@ -11,15 +11,15 @@ version: 211
 # %rarity_color% - レアリティの色
 # %fish% - 魚の名前
 # %fish_with_rarity% - テキストのフォーマット "[レアリティ] [魚の名前]" (色付き)
-catch-fish: "&b[MoreFish]&r &e%player%&r は %rarity_color%%length%cm &l%fish_with_rarity% を釣り上げた!"
-get-1st: "&b[MoreFish]&r &e%player%&r は今 1位です!"
-no-fishing-allowed: "&b[MoreFish]&r コンテスト中でないため、あなたは釣りをできません"
+catch-fish: "&b[¿]&r &e%player%&r は %rarity_color%%length%cm &l%fish_with_rarity% を釣り上げた!"
+get-1st: "&b[¿]&r &e%player%&r は今 1位です!"
+no-fishing-allowed: "&b[¿]&r コンテスト中でないため、あなたは釣りをできません"
 
 # %time% - コンテストの残り時間 (例 1m 23s)
-contest-start: "&b[MoreFish]&r 釣りコンテストが始まりました"
-contest-start-timer: "&b[MoreFish]&r コンテストの制限時間は %time% です"
-contest-stop: "&b[MoreFish]&r 釣りコンテストの終了です"
-timer-boss-bar: "&b[MoreFish]&r &b&l釣りコンテスト &r[%time% left]"
+contest-start: "&b[¿]&r 釣りコンテストが始まりました"
+contest-start-timer: "&b[¿]&r コンテストの制限時間は %time% です"
+contest-stop: "&b[¿]&r 釣りコンテストの終了です"
+timer-boss-bar: "&b[¿]&r &b&l釣りコンテスト &r[%time% left]"
 time-format-minutes: "m"
 time-format-seconds: "s"
 
@@ -28,33 +28,33 @@ time-format-seconds: "s"
 # %player% - 釣り人の名前
 # %length% - 魚のサイズ
 # %fish% - 魚の名前
-top-list: "&b[MoreFish]&r &e%ordinal%. &7: %player%, %length%cm %fish%"
-top-no-record: "&b[MoreFish]&r 誰もまだ記録を持っていません"
-top-mine: "&b[MoreFish]&r あなたは %ordinal%: %length%cm %fish%"
-top-mine-no-record: "&b[MoreFish]&r あなたは賞を獲得していません"
+top-list: "&b[¿]&r &e%ordinal%. &7: %player%, %length%cm %fish%"
+top-no-record: "&b[¿]&r 誰もまだ記録を持っていません"
+top-mine: "&b[¿]&r あなたは %ordinal%: %length%cm %fish%"
+top-mine-no-record: "&b[¿]&r あなたは賞を獲得していません"
 
 # %amount% - もらった金額の量
 # %format% - フォーマットされた金額と通貨単位の文字列 (例 $10.00, 30 Dollars) [注意：エラーが起こるかもしれません]
 # %ordinal% - プレイヤーのランク (例 1st, 2nd, 3rd, 4th)
 # %number% - プレイヤーのランクの数値
 # %player% - 釣り人の名前
-reward: "&b[MoreFish]&r あなたは &e%item%&r を %ordinal% コンテストの賞品としてゲットしました!"
-reward-cash-prize: "&b[MoreFish]&r あなたは &e%amount%&r 円を the %ordinal% コンテストの賞金としてゲットしました!"
+reward: "&b[¿]&r あなたは &e%item%&r を %ordinal% コンテストの賞品としてゲットしました!"
+reward-cash-prize: "&b[¿]&r あなたは &e%amount%&r 円を the %ordinal% コンテストの賞金としてゲットしました!"
 
-no-permission: "&b[MoreFish]&r あなたには許可がありません"
-already-ongoing: "&b[MoreFish]&r そのコンテストはすでに行われています"
-already-stopped: "&b[MoreFish]&r そのコンテストはすでに終了しました"
-not-number: "&b[MoreFish]&r '%s' 不正な数値です"
-not-positive: "&b[MoreFish]&r 整数のみが使用可能です"
-not-ongoing: "&b[MoreFish]&r そのコンテストは今は行われていません"
-clear-records: "&b[MoreFish]&r 記録の消去に成功しました"
-reload-config: "&b[MoreFish]&r コンフィグの再読み込みに成功しました"
-failed-to-reload: "&b[MoreFish]&r Failed to reload: Please check your console."
-in-game-command: "&b[MoreFish]&r それはゲーム内のコマンドです"
-invalid-command: "&b[MoreFish]&r それは不正なコマンドです"
+no-permission: "&b[¿]&r あなたには許可がありません"
+already-ongoing: "&b[¿]&r そのコンテストはすでに行われています"
+already-stopped: "&b[¿]&r そのコンテストはすでに終了しました"
+not-number: "&b[¿]&r '%s' 不正な数値です"
+not-positive: "&b[¿]&r 整数のみが使用可能です"
+not-ongoing: "&b[¿]&r そのコンテストは今は行われていません"
+clear-records: "&b[¿]&r 記録の消去に成功しました"
+reload-config: "&b[¿]&r コンフィグの再読み込みに成功しました"
+failed-to-reload: "&b[¿]&r Failed to reload: Please check your console."
+in-game-command: "&b[¿]&r それはゲーム内のコマンドです"
+invalid-command: "&b[¿]&r それは不正なコマンドです"
 
-rewards-gui-title: "&b[MoreFish]&r コンテストの賞を設定してください"
-rewards-guide-icon-name: "&b[MoreFish]&r &b あなたのアイテムをスロットに設置してください"
+rewards-gui-title: "&b[¿]&r コンテストの賞を設定してください"
+rewards-guide-icon-name: "&b[¿]&r &b あなたのアイテムをスロットに設置してください"
 rewards-guide-icon-lore:
   - "&7 1番目のスロットは"
   - "&7 1位の賞品,"
@@ -75,10 +75,10 @@ rewards-emerald-icon-lore:
 enter-cash-prize:
   - "チャットで値を送信してください"
   - "または'cancel' で編集を終了します"
-entered-cancel: "&b[MoreFish]&r 編集を終了しました"
-entered-not-number: "&b[MoreFish]&r '%s' は不正な数値です、 数値を再入力してください"
-entered-not-positive: "&b[MoreFish]&r 数値はマイナスに設定できません、正しい数字を入力してください"
-entered-successfully: "&b[MoreFish]&r 値を編集しました"
-saved-changes: "&b[MoreFish]&r 変更を保存しました"
+entered-cancel: "&b[¿]&r 編集を終了しました"
+entered-not-number: "&b[¿]&r '%s' は不正な数値です、 数値を再入力してください"
+entered-not-positive: "&b[¿]&r 数値はマイナスに設定できません、正しい数字を入力してください"
+entered-successfully: "&b[¿]&r 値を編集しました"
+saved-changes: "&b[¿]&r 変更を保存しました"
 
-old-file: "§c[MoreFish] あなたの%s は古すぎます! アップデートしてください"
+old-file: "§c[¿] あなたの%s は古すぎます! アップデートしてください"

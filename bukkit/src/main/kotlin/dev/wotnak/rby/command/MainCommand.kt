@@ -31,7 +31,7 @@ class MainCommand(
     @CommandPermission("rby.help")
     fun help(sender: CommandSender) {
         val pluginName = pluginInfo.name
-        val prefix = "${ChatColor.AQUA}[$pluginName]${ChatColor.RESET} "
+        val prefix = "${ChatColor.AQUA}[¿]${ChatColor.RESET} "
         sender.sendMessage(
             prefix +
                     "${ChatColor.DARK_AQUA}> ===== " +

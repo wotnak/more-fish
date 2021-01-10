@@ -3,7 +3,7 @@
 # translated by blockboard08 (2.1.0)
 #
 
-version: 211
+version: 212
 
 # %player% - 釣魚者的名字
 # %length% - 魚的長度
@@ -11,14 +11,14 @@ version: 211
 # %rarity_color% - 稀有級別的顏色
 # %fish% - 魚的名稱
 # %fish_with_rarity% - 文字訊息的格式為 "[稀有級別] [魚的名稱]" (會有顏色)
-catch-fish: "&b[MoreFish]&r &e%player%&r 抓到了 %rarity_color%%length%公分 &l%fish_with_rarity%"
-get-1st: "&b[MoreFish]&r &e%player%&r 現在是新的第一名!"
-no-fishing-allowed: "&b[MoreFish]&r 你不能釣魚除非競賽正在進行中."
+catch-fish: "&b[¿]&r &e%player%&r 抓到了 %rarity_color%%length%公分 &l%fish_with_rarity%"
+get-1st: "&b[¿]&r &e%player%&r 現在是新的第一名!"
+no-fishing-allowed: "&b[¿]&r 你不能釣魚除非競賽正在進行中."
 
 # %time% - 競賽所剩下的時間 (e.g. 1分 23秒)
-contest-start: "&b[MoreFish]&r 釣魚競賽已經開始了!"
-contest-start-timer: "&b[MoreFish]&r 這競賽會在 %time% 後結束."
-contest-stop: "&b[MoreFish]&r 釣魚競賽已經結束了!"
+contest-start: "&b[¿]&r 釣魚競賽已經開始了!"
+contest-start-timer: "&b[¿]&r 這競賽會在 %time% 後結束."
+contest-stop: "&b[¿]&r 釣魚競賽已經結束了!"
 timer-boss-bar: "&b&l釣魚競賽 &r[%time% left]"
 time-format-minutes: "分"
 time-format-seconds: "秒"
@@ -28,32 +28,32 @@ time-format-seconds: "秒"
 # %player% - 釣魚者的名稱
 # %length% - 魚的長度
 # %fish% - 魚的名稱
-top-list: "&b[MoreFish]&r &e%ordinal%. &7: %player%, %length%公分 %fish%"
-top-no-record: "&b[MoreFish]&r 還沒有人創下任何紀錄."
-top-mine: "&b[MoreFish]&r 你是 %ordinal%: %length%公分 %fish%"
-top-mine-no-record: "&b[MoreFish]&r 你還沒有任何紀錄."
+top-list: "&b[¿]&r &e%ordinal%. &7: %player%, %length%公分 %fish%"
+top-no-record: "&b[¿]&r 還沒有人創下任何紀錄."
+top-mine: "&b[¿]&r 你是 %ordinal%: %length%公分 %fish%"
+top-mine-no-record: "&b[¿]&r 你還沒有任何紀錄."
 
 # %amount% - 給予金錢的數量
 # %ordinal% - 玩家的名次順序 (e.g. 1st, 2nd, 3rd, 4th)
 # %number% - 玩家名次的數字
 # %player% - 釣魚者的名稱
-reward: "&b[MoreFish]&r 你已經得到 &e%item%&r 當作這 %ordinal% 競賽的獎勵!"
-reward-cash-prize: "&b[MoreFish]&r 你已經得到 &e%amount%&r 當作這 %ordinal% 競賽的獎勵!"
+reward: "&b[¿]&r 你已經得到 &e%item%&r 當作這 %ordinal% 競賽的獎勵!"
+reward-cash-prize: "&b[¿]&r 你已經得到 &e%amount%&r 當作這 %ordinal% 競賽的獎勵!"
 
-no-permission: "&b[MoreFish]&r 你沒有這個權限."
-already-ongoing: "&b[MoreFish]&r 這競賽已經在進行中."
-already-stopped: "&b[MoreFish]&r 這競賽已經終止了."
-not-number: "&b[MoreFish]&r '%s' 是無效的數字."
-not-positive: "&b[MoreFish]&r 只有正數是可行的."
-not-ongoing: "&b[MoreFish]&r 這競賽現在沒有在進行中."
-clear-records: "&b[MoreFish]&r 這些紀錄已經成功地被清除."
-reload-config: "&b[MoreFish]&r 重新讀取配置檔案成功."
-failed-to-reload: "&b[MoreFish]&r Failed to reload: Please check your console."
-in-game-command: "&b[MoreFish]&r 這是一個遊戲中的指令."
-shop-disabled: "&b[MoreFish]&r 魚商店現在被關閉."
-player-not-found: "&b[MoreFish]&r 沒有玩家被叫作 '%s'."
-forced-player-to-shop: "&b[MoreFish]&r 強迫 %s 去開啟魚商店介面."
-invalid-command: "&b[MoreFish]&r 那是一個無效的指令."
+no-permission: "&b[¿]&r 你沒有這個權限."
+already-ongoing: "&b[¿]&r 這競賽已經在進行中."
+already-stopped: "&b[¿]&r 這競賽已經終止了."
+not-number: "&b[¿]&r '%s' 是無效的數字."
+not-positive: "&b[¿]&r 只有正數是可行的."
+not-ongoing: "&b[¿]&r 這競賽現在沒有在進行中."
+clear-records: "&b[¿]&r 這些紀錄已經成功地被清除."
+reload-config: "&b[¿]&r 重新讀取配置檔案成功."
+failed-to-reload: "&b[¿]&r Failed to reload: Please check your console."
+in-game-command: "&b[¿]&r 這是一個遊戲中的指令."
+shop-disabled: "&b[¿]&r 魚商店現在被關閉."
+player-not-found: "&b[¿]&r 沒有玩家被叫作 '%s'."
+forced-player-to-shop: "&b[¿]&r 強迫 %s 去開啟魚商店介面."
+invalid-command: "&b[¿]&r 那是一個無效的指令."
 
 rewards-gui-title: "設置競賽獎勵"
 rewards-guide-icon-name: "&b放置你的物品到空位中!"
@@ -75,19 +75,19 @@ rewards-emerald-icon-name: "&a獎勵給予 %ordinal%: $&2%amount%"
 rewards-emerald-icon-lore:
   - "&7點擊並編輯"
 enter-cash-prize:
-  - "&b[MoreFish]&r 輸入一個數值在你的聊天室窗."
-  - "&b[MoreFish]&r 或是輸入 'cancel' 來停止編輯."
-entered-cancel: "&b[MoreFish]&r 停止編輯模式."
-entered-not-number: "&b[MoreFish]&r '%s' 不是一個有效數字. 請再次輸入數字."
-entered-not-positive: "&b[MoreFish]&r 這數字不能是負的. 請輸入正確數字."
-entered-successfully: "&b[MoreFish]&r 這數值已經被輸入."
-saved-changes: "&b[MoreFish]&r 這些更改已經被存取."
+  - "&b[¿]&r 輸入一個數值在你的聊天室窗."
+  - "&b[¿]&r 或是輸入 'cancel' 來停止編輯."
+entered-cancel: "&b[¿]&r 停止編輯模式."
+entered-not-number: "&b[¿]&r '%s' 不是一個有效數字. 請再次輸入數字."
+entered-not-positive: "&b[¿]&r 這數字不能是負的. 請輸入正確數字."
+entered-successfully: "&b[¿]&r 這數值已經被輸入."
+saved-changes: "&b[¿]&r 這些更改已經被存取."
 
 # %price% - 魚的販售價格
 shop-gui-title: "放置你的魚來販售"
 shop-emerald-icon-name: "&a可以賣 $%price%"
-shop-sold: "&b[MoreFish]&r 你賣魚賺取了 &a$%price%&r."
-shop-no-fish: "&b[MoreFish]&r 沒有任何魚可以販賣. 請放置牠們到空位上."
-created-sign-shop: "&b[MoreFish]&r 你已經建立一個魚商店!"
+shop-sold: "&b[¿]&r 你賣魚賺取了 &a$%price%&r."
+shop-no-fish: "&b[¿]&r 沒有任何魚可以販賣. 請放置牠們到空位上."
+created-sign-shop: "&b[¿]&r 你已經建立一個魚商店!"
 
-old-file: "&c[MoreFish] 你的 %s 太舊了! 請把它更新."
+old-file: "&c[¿] 你的 %s 太舊了! 請把它更新."
