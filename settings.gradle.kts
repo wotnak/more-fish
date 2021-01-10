@@ -1,8 +1,12 @@
-rootProject.name = "Rby"
-include("Rby")
-include("RbyApi")
-include("RbyAddons")
+rootProject.name = "rby"
+include("bukkit")
+include("fabric")
+include("common")
 
-project(":Rby").projectDir = File("plugin")
-project(":RbyApi").projectDir = File("api")
-project(":RbyAddons").projectDir = File("addons")
+pluginManagement {
+    repositories {
+        jcenter()
+        gradlePluginPortal()
+        maven("https://maven.fabricmc.net/") { name = "Fabric" }
+    }
+}

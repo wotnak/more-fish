@@ -4,12 +4,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm")
     id("com.github.johnrengelman.shadow") version "6.1.0"
-    id("net.minecrell.plugin-yml.bukkit")
+    id("net.minecrell.plugin-yml.bukkit") version "0.3.0"
 }
 
 group = "dev.wotnak.rby"
 
 repositories {
+    maven("https://papermc.io/repo/repository/maven-public/")
     maven("https://repo.citizensnpcs.co/")
     maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
     maven("https://repo.dmulloy2.net/nexus/repository/public/")
@@ -27,9 +28,9 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":common"))
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
-    implementation(project(":RbyApi"))
     implementation("co.aikar:acf-paper:0.5.0-SNAPSHOT")
     implementation("com.github.elsiff:egui:1.0.2-SNAPSHOT")
 
@@ -54,6 +55,7 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<ShadowJar> {
     relocate("co.aikar.commands", "${group}.acf")
+    archiveBaseName.set("${rootProject.name}-${project.name}")
 }
 
 tasks { build { dependsOn(shadowJar) } }
